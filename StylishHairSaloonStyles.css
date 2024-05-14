@@ -1,0 +1,266 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ddd;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1% 5%;
+    color: #fff;
+}
+
+.logo{
+    max-height: 50px;
+    cursor: pointer; 
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;   
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#d45f57;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.about {
+    padding: 50px 0;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about-us-image {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    width: 65%;
+    float: left;
+    text-align: left;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-content h2 {
+    font-size: 24px;
+    color: #d86057;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.promotion {
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+
+.promotion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-card article {
+    width: 30%;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card article:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-logo {
+    margin-right: 28%; 
+    margin-left: 25px;
+}
+
+.footer-logo img {
+    max-height: 60px; 
+    width: auto;
+}
+
+.copyright {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1% 3%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .about-us-image {
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .promotion {
+        padding: 30px 0;
+    }
+
+    .service-card article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .service-card img {
+        height: 150px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 1% 2%;
+    }
+
+    nav ul li {
+        padding: 8px 8px;
+    }
+
+    .about-content h1 {
+        font-size: 28px;
+    }
+
+    .about-content h2 {
+        font-size: 20px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .service-card article {
+        padding: 15px;
+    }
+
+    .service-card h2 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    .footer-logo {
+        margin-right: 10%;
+    }
+
+    .footer-logo img {
+        max-height: 40px;
+    }
+}
